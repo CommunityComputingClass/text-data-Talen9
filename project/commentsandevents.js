@@ -33,17 +33,19 @@ function setup() {
   textFont(myFont);
   textBox = createInput("Type your answer here");
   textBox.size(200,40);
-  textBox.position(50,100);
+  textBox.position(50,70,);
+  textBox.style("border-radius","10px")
+  textBox.style ("padding", "5px")
   textBox.input(storeText);
   
   background(50);
   fill(255);
   textSize(14);
-  text(myQuestion,50,50);
+  text(myQuestion,150,50);
   
   textFont(myFont);
   newButton = createButton("Celebrate");
-  newButton.position(200,300);
+  newButton.position(300,300);
   newButton.mousePressed(shownewText);
 }
 
@@ -56,9 +58,12 @@ function draw() {
   text(myQuestion,50,50);
   
   if (showAnswersMode){
+    fill ("gray")
+    rect(50,150,210,180,10);
     fill("pink");
     for (let i=0; i<all_the_answers.length; i++){
-      text(all_the_answers[i], 50, 160 +i*20);
+      text(all_the_answers[i], 55, 175 +i*20);
+      
 
      }
     }
@@ -100,7 +105,7 @@ function showAnswers(){
   fill("pink");
   
   for (let i = 0; i < all_the_answers.length; i++) {
-    text(all_the_answers[i], 50, 100 + i * 20);
+    text(all_the_answers[i], 50, 200 + i * 20);
   }
 }
 

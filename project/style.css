@@ -5,3 +5,17 @@ html, body {
 canvas {
   display: block;
 }
+
+button {
+  textFont(Waffle Cake.otf);
+  font-size: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background: #4cb1c3;
+}
+
+button:hover {
+  background: #1496a0;
+}
